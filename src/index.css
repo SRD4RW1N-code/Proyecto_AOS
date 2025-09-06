@@ -1,0 +1,69 @@
+/* Reset básico y altura completa */
+html, body, #root {
+	height: 100%;
+}
+body {
+	margin: 0;
+	transition: background-color .3s ease, color .3s ease;
+}
+
+/* Temas */
+.theme-light {
+	--bg-color: #f8f9fa;
+	--panel-bg: #ffffff;
+	--text-color: #212529;
+	--accent: #0d6efd;
+	--accent-contrast: #fff;
+}
+.theme-dark {
+	--bg-color: #121212;
+	--panel-bg: #1e1e1e;
+	--text-color: #e9ecef;
+	--accent: #66b2ff;
+	--accent-contrast: #000;
+}
+
+body.theme-light, body.theme-dark {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+/* Panel y botones temáticos (reutilizables) */
+.themed-panel {
+	background: var(--panel-bg);
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.08);
+	max-width: 480px;
+	width: 100%;
+}
+
+.btn-theme {
+	font-weight: 500;
+	border: 1px solid var(--accent);
+	background: var(--accent);
+	color: var(--accent-contrast);
+	padding: .6rem 1rem;
+	border-radius: .5rem;
+	cursor: pointer;
+	transition: background-color .2s ease, transform .1s ease;
+}
+.btn-theme:hover { filter: brightness(1.05); }
+.btn-theme:active { transform: scale(.97); }
+
+.btn-secondary-theme {
+	background: transparent;
+	color: var(--accent);
+}
+.btn-secondary-theme:hover { background: rgba(0,0,0,.05); }
+body.theme-dark .btn-secondary-theme:hover { background: rgba(255,255,255,.08); }
+
+.btn-toggle-theme {
+	background: linear-gradient(135deg,var(--accent),#845ef7);
+	border: none;
+}
+
+.stack-h { display: flex; gap: .75rem; }
+
+/* Utilidad */
+.max-w { max-width: 640px; }
