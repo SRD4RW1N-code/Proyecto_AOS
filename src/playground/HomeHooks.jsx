@@ -52,6 +52,42 @@ function HomeHooks() {
       category: "Efectos" 
     },
     { 
+      name: "useId", 
+      path: "/useId", 
+      description: "Genera IDs únicos para accesibilidad y formularios.", 
+      category: "Contexto" 
+    },
+    {
+      name: "useImperativeHandle",
+      path: "/useImperativeHandle",
+      description: "permite personalizar el identificador expuesto como una ref.",
+      category: "Referencias"
+    },
+    {
+      name: "useInsertionEffect",
+      path: "/useInsertionEffect",
+      description: "permite insertar elementos en el DOM antes de que se dispare cualquier Efecto de diseño (layout).",
+      category: "Efectos"
+    },
+    {
+      name: "useLayoutEffect",
+      path: "/useLayoutEffect",
+      description: "es una versión de useEffect que se acciona antes que el navegador vuelva a pintar la pantalla.",
+      category: "Efectos"
+    },
+    {
+      name: "useMemo",
+      path: "/useMemo",
+      description: "permite guardar en caché el resultado de un cálculo entre renderizados.",
+      category: "Optimización"
+    },
+    {
+      name: "useOptimistic",
+      path: "/useOptimistic",
+      description: "permite actualizar la interfaz de usuario / UI de manera optimista.",
+      category: "Nuevos React 19"
+    },
+    { 
       name: "useReducer", 
       path: "/useReducer", 
       description: "Maneja estado complejo con un patrón reducer.", 
@@ -74,7 +110,7 @@ function HomeHooks() {
       path: "/useTransition", 
       description: "Permite actualizaciones no urgentes sin bloquear la UI.", 
       category: "Rendimiento" 
-    }
+    },
   ];
 
   return (
